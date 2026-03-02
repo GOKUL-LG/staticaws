@@ -1,8 +1,16 @@
 import React from "react";
 import "./App.css";
 import logo from "./img/logo.jpg"; // import logo
+import {useNavigate} from "react-router-dom"
 
 function App() {
+  const move = useNavigate();
+  const clickbutton =() =>
+  {
+    move("/dummy");
+  };
+
+
   return (
     <div className="app">
 
@@ -18,6 +26,7 @@ function App() {
         </ul>
       </nav>
 
+
       {/* Body */}
       <main className="main-content">
         <section className="hero">
@@ -25,7 +34,7 @@ function App() {
           <p>
             Clean layout with logo navbar and improved footer design.
           </p>
-          <button className="btn">Get Started</button>
+          <button className="btn" onClick={clickbutton}>Get Started</button>
         </section>
       </main>
 
